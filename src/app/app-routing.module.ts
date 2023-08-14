@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserFormComponent } from './user-form/user-form.component';
 
-const routes: Routes = [{
-  path:'new-user', component: UserFormComponent
-}];
+const routes: Routes = [
+  {
+    path: 'new-user',
+    component: UserFormComponent,
+  },
+  {
+    path: 'new-user/:id',
+    component: UserFormComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
